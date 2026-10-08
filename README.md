@@ -2,6 +2,8 @@
 
 > 说得出名字，才写得清需求。
 
+**在线访问：<https://guo25476688-cmd.github.io/web-interaction-glossary/>**
+
 一本给（新手）产品经理用的**交互辞典**：每个术语都看得见、点得动。你见过那个效果，却不知道它叫什么，于是 PRD 写不清、和设计开发说不清、也没法让 AI 准确做出来——这个网站就是用来解决这个问题的。
 
 ## 能帮你做什么
@@ -48,12 +50,6 @@ js/terms-more-1.js    扩充术语：反馈提示 / 导航 / 输入控件 / 内�
 js/terms-more-2.js    扩充术语：移动端与手势 / 引导与系统状态 / 动效 / 页面区块
 js/app.js             搜索、渲染、我的清单
 ```
-
-## 发布到 GitHub Pages
-
-1. 进入仓库 **Settings → Pages**
-2. **Source** 选择 `Deploy from a branch`，分支选 `main`、目录选 `/ (root)`，保存
-3. 稍等片刻，访问 `https://<你的用户名>.github.io/<仓库名>/`
 
 ## 如何新增一个术语
 
