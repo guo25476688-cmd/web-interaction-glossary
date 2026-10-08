@@ -2,7 +2,10 @@
 
 > 说得出名字，才写得清需求。
 
-**在线访问：<https://guo25476688-cmd.github.io/web-interaction-glossary/>**
+**在线访问**（两个版本内容完全相同，只是外观不同）：
+
+- 标准版：<https://guo25476688-cmd.github.io/web-interaction-glossary/>
+- 线谱版：<https://guo25476688-cmd.github.io/web-interaction-glossary/voigt.html>
 
 一本给（新手）产品经理用的**交互辞典**：每个术语都看得见、点得动。你见过那个效果，却不知道它叫什么，于是 PRD 写不清、和设计开发说不清、也没法让 AI 准确做出来——这个网站就是用来解决这个问题的。
 
@@ -46,7 +49,8 @@
 ## 文件结构
 
 ```
-index.html            页面骨架与样式
+index.html            标准版的页面骨架与样式
+voigt.html            线谱版的页面骨架与样式（水彩色域、轨道线、沿线排布的文字）
 js/helpers.js         简繁转换、实例共用的样式和小工具（D 对象）
 js/terms-basic.js     分类、灵感图库，以及最初的 60 个术语
 js/terms-more-1.js    扩充术语：反馈提示 / 导航 / 输入控件 / 内容展示
@@ -55,7 +59,8 @@ js/terms-more-3.js    扩充术语：反馈提示 / 按钮与输入 / 导航（�
 js/terms-more-4.js    扩充术语：内容展示与社交 / 移动端 / 系统状态（第三批·下）
 js/terms-more-5.js    扩充术语：页面类型 / 常见流程（第四批，线框示意）
 js/terms-more-6.js    扩充术语：概念与方法（第五批，示意图与小实验）
-js/app.js             搜索、渲染、我的清单
+js/app.js             标准版：搜索、渲染、我的清单
+js/app-voigt.js       线谱版：画面绘制、搜索、渲染、我的清单
 ```
 
 ## 如何新增一个术语

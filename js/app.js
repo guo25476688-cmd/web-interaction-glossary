@@ -119,7 +119,10 @@ function pageHTML() {
       <div class="mx-auto max-w-7xl px-4 pb-10 pt-6">
         <div class="flex items-center justify-between">
           <div class="flex items-center gap-2 font-semibold"><i class="fa fa-book"></i> 网页交互术语图鉴</div>
-          <div class="flex rounded-lg bg-white/20 p-0.5">${langBtn('cn', '简体')}${langBtn('tw', '繁体')}</div>
+          <div class="flex items-center gap-3">
+            <a href="voigt.html" class="text-sm text-white/80 underline hover:text-white">切换到线谱版</a>
+            <div class="flex rounded-lg bg-white/20 p-0.5">${langBtn('cn', '简体')}${langBtn('tw', '繁体')}</div>
+          </div>
         </div>
         <h1 class="mt-10 text-3xl font-bold md:text-4xl">说得出名字，才写得清需求</h1>
         <p class="mt-3 max-w-2xl text-white/80">给产品经理的交互术语手册：${TERMS.length} 个术语都能亲手点一点，并附上 PRD 要点、易混淆对比和可以直接复制给 AI 的提示词。</p>
