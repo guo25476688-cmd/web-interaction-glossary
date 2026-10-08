@@ -11,6 +11,8 @@ var CATS = [
   { id: 'input', zh: '输入控件', icon: 'keyboard-o' },
   { id: 'display', zh: '内容展示', icon: 'clone' },
   { id: 'section', zh: '页面区块', icon: 'columns' },
+  { id: 'page', zh: '页面类型', icon: 'file-o' },
+  { id: 'flow', zh: '常见流程', icon: 'random' },
   { id: 'mobile', zh: '移动端与手势', icon: 'mobile' },
   { id: 'system', zh: '引导与系统状态', icon: 'life-ring' },
   { id: 'state', zh: '状态与动效', icon: 'magic' }
