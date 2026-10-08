@@ -67,7 +67,7 @@ function cardHTML(t) {
     <header class="flex items-start justify-between gap-2 px-4 pt-4">
       <div>
         <h3 class="font-semibold text-slate-900">${t.zh}
-          <button class="ml-1 rounded bg-indigo-50 px-1.5 py-0.5 font-mono text-sm font-medium text-indigo-600 hover:bg-indigo-100" title="点击复制英文术语" onclick="App.copy('${t.en}')">${t.en}</button>
+          <button class="ml-1 rounded bg-indigo-50 px-1.5 py-0.5 font-mono text-sm font-medium text-indigo-600 hover:bg-indigo-100" title="点击复制英文术语" data-en="${t.en}" onclick="App.copy(this.dataset.en)">${t.en}</button>
         </h3>
         <p class="mt-1 text-xs text-slate-400">也叫：${t.alias.join('、')}</p>
       </div>

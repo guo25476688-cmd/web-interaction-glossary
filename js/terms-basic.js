@@ -15,7 +15,8 @@ var CATS = [
   { id: 'flow', zh: '常见流程', icon: 'random' },
   { id: 'mobile', zh: '移动端与手势', icon: 'mobile' },
   { id: 'system', zh: '引导与系统状态', icon: 'life-ring' },
-  { id: 'state', zh: '状态与动效', icon: 'magic' }
+  { id: 'state', zh: '状态与动效', icon: 'magic' },
+  { id: 'concept', zh: '概念与方法', icon: 'lightbulb-o' }
 ]
 
 // 灵感图库：用于找真实案例、做竞品分析（只放链接，不搬运截图）
