@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>交互辞典 · 线谱版</title>
+    <meta
+      name="description"
+      content="网页交互术语图鉴的另一种视觉版本：水彩色域、轨道线与沿线排布的文字，内容与标准版完全一致。"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"
+    />
+    <!-- 英文与数字用细的等宽工程字体；加载失败时退回系统等宽字体 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/opencc-js@1.0.5/dist/umd/cn2t.js"></script>
+    <style>
+      :root {
+        --ink: #1c1c1c;
+        --soft: #8a8a8a;
+        --line: #d9655b; /* 细红线 */
+        --mag: #c2417f; /* 品红，用于编号 */
+      }
+      body {
+        background: #fff;
+        color: var(--ink);
+        font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', sans-serif;
+        font-weight: 300;
+      }
+      /* 等宽工程字：英文大写、拉开字距 */
+      .mono {
+        font-family: 'Share Tech Mono', 'SF Mono', ui-monospace, Menlo, Consolas, monospace;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        font-weight: 400;
+      }
+      .ttl {
+        font-weight: 300;
+        letter-spacing: 0.04em;
+      }
+      .soft {
+        color: var(--soft);
+      }
+      /* “+ 标签 ————” 式的小标题，后面拖一条细线 */
+      .lab {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 12px;
+        letter-spacing: 0.12em;
+        white-space: nowrap;
+        margin-top: 14px;
+      }
+      .lab::before {
+        content: '+';
+      }
+      .lab::after {
+        content: '';
+        flex: 1;
+        height: 0.6px;
+        background: var(--ink);
+      }
+      svg text {
+        font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+        font-weight: 300;
+      }
+      svg text.mono {
+        font-family: 'Share Tech Mono', 'SF Mono', ui-monospace, Menlo, Consolas, monospace;
+        font-weight: 400;
+      }
+      /* 轨道节点：悬停或选中时，圈线加粗、色域变实 */
+      .node {
+        cursor: pointer;
+      }
+      .node .ring {
+        transition: stroke-width 0.25s;
+      }
+      .node .blob {
+        transition: opacity 0.25s;
+      }
+      .node:hover .ring,
+      .node.on .ring {
+        stroke-width: 1.8;
+      }
+      .node:hover .blob,
+      .node.on .blob {
+        opacity: 1;
+      }
+      /* 实例区是“展柜”：里面保持标准界面的样子，不随网站风格变化 */
+      .specimen {
+        border: 0.6px solid var(--ink);
+        background: #f8fafc;
+        font-weight: 400;
+      }
+      .demo {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        height: 192px;
+        font-size: 14px;
+        color: #334155;
+      }
+      .tab.on {
+        color: var(--ink);
+        border-bottom: 0.8px solid var(--ink);
+      }
+      .pick.on,
+      .lang.on,
+      .chip.on {
+        background: var(--ink);
+        color: #fff;
+      }
+      /* 实例用到的少量自定义动画（与标准版相同） */
+      summary::-webkit-details-marker {
+        display: none;
+      }
+      @keyframes wig-marquee {
+        to {
+          transform: translateX(-50%);
+        }
+      }
+      @keyframes wig-ripple {
+        to {
+          transform: scale(4);
+          opacity: 0;
+        }
+      }
+      .wig-noscrollbar {
+        scrollbar-width: none;
+      }
+      .wig-noscrollbar::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <div
+      id="tip"
+      class="pointer-events-none fixed bottom-6 left-1/2 z-[60] -translate-x-1/2 px-4 py-2 text-sm opacity-0 transition-opacity duration-300"
+      style="background: var(--ink); color: #fff"
+    ></div>
+
+    <!-- 数据与实例和标准版（index.html）共用，只有页面外观不同 -->
+    <script src="js/helpers.js"></script>
+    <script src="js/terms-basic.js"></script>
+    <script src="js/terms-more-1.js"></script>
+    <script src="js/terms-more-2.js"></script>
+    <script src="js/terms-more-3.js"></script>
+    <script src="js/terms-more-4.js"></script>
+    <script src="js/terms-more-5.js"></script>
+    <script src="js/terms-more-6.js"></script>
+    <script src="js/app-voigt.js"></script>
+  </body>
+</html>
