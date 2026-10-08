@@ -7,6 +7,14 @@
 - 标准版：<https://guo25476688-cmd.github.io/web-interaction-glossary/>
 - 线谱版：<https://guo25476688-cmd.github.io/web-interaction-glossary/voigt.html>
 
+线谱版的首屏：11 个分类沿对角线排开，点击任意一个进入该分类。
+
+![线谱版首屏](docs/voigt-home.jpg)
+
+词条页：每个术语都有可操作的实例、大白话、易混淆对比，以及「对 AI 说 / 写进 PRD」。
+
+![线谱版词条页](docs/voigt-entries.jpg)
+
 一本给（新手）产品经理用的**交互辞典**：每个术语都看得见、点得动。你见过那个效果，却不知道它叫什么，于是 PRD 写不清、和设计开发说不清、也没法让 AI 准确做出来——这个网站就是用来解决这个问题的。
 
 ## 能帮你做什么
@@ -51,6 +59,7 @@
 ```
 index.html            标准版的页面骨架与样式
 voigt.html            线谱版的页面骨架与样式（水彩色域、轨道线、沿线排布的文字）
+docs/                 README 用到的截图
 js/helpers.js         简繁转换、实例共用的样式和小工具（D 对象）
 js/terms-basic.js     分类、灵感图库，以及最初的 60 个术语
 js/terms-more-1.js    扩充术语：反馈提示 / 导航 / 输入控件 / 内容展示
